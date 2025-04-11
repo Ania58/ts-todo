@@ -66,9 +66,23 @@ const markAsDone = (idToMark: number) : void => {
 
     if (!markCompleted) {
         console.log(`❗ No task found with ID ${idToMark}`);
-      }      
+    }      
 };
 
 console.log("Marking as done:", toDoList[1].title);
 markAsDone(toDoList[1].id);
+showToDoList();
+
+const editTitle = (idToEdit: number, newTitle: string) : void => {
+    const task = toDoList.find(toDo => idToEdit === toDo.id);
+
+    if (task) task.title = newTitle;
+
+    if (!task) {
+        console.log(`❗ No task found with ID ${idToEdit}`);
+    };
+}
+
+console.log("Editing a title:", toDoList[3].title);
+editTitle(toDoList[3].id, "Watch films");
 showToDoList();
