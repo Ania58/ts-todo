@@ -50,3 +50,11 @@ removeATask(toDoList[3].id);
 console.log("After:", toDoList);
 
 console.log("Done tasks:", doneList);
+
+const showToDoList = () : void => {
+    toDoList.forEach((toDo, index) => {
+        console.log(`${index + 1}. ${toDo.title} [id: ${toDo.id}] [${toDo.done ? "✔️" : "❌"}]`);
+    });
+}
+
+showToDoList();
