@@ -58,3 +58,17 @@ const showToDoList = () : void => {
 }
 
 showToDoList();
+
+const markAsDone = (idToMark: number) : void => {
+    const markCompleted = toDoList.find(toDo => idToMark === toDo.id);
+
+    if (markCompleted) markCompleted.done = true;
+
+    if (!markCompleted) {
+        console.log(`❗ No task found with ID ${idToMark}`);
+      }      
+};
+
+console.log("Marking as done:", toDoList[1].title);
+markAsDone(toDoList[1].id);
+showToDoList();
