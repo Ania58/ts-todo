@@ -23,6 +23,7 @@ createToDoList("Learn TypeScript");
 createToDoList("Keep GitHub green 🌱");
 createToDoList("Make tea");
 createToDoList("Clean desk");
+createToDoList("Watch a film");
 
 console.log(toDoList);
 
